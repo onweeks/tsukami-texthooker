@@ -24,6 +24,14 @@ A minimal, single-file texthooker for reading Japanese text (manga, VNs, games) 
 - Manual line entry (type into the box + Enter) for notes
 - Auto-scroll, with a "↓ new lines" button when you've scrolled up and don't want to jump
 
+## Example workflow: manga + manga-ocr + Yomitan
+
+1. Run [manga-ocr](https://github.com/kha-white/manga-ocr) in the background. It watches your screen/clipboard, OCRs Japanese text from manga panels, and writes the recognized text to your system clipboard.
+2. Open `texthooker.html` and turn on **Clipboard Inserter Redux** for that tab — every new clipboard write from manga-ocr becomes a new line in the log.
+3. Install [Yomitan](https://github.com/yomidevs/yomitan) and set up your dictionaries and Anki export template.
+4. Hover/scan words directly in the texthooker log with Yomitan — lines are plain selectable text, so scanning and card mining works exactly like on any other webpage.
+5. Use 📖 Focus mode or 🪟 Floating window to keep the log visible without cluttering your screen while reading. The floating window is especially handy if your manga viewer runs full-screen: it stays on top of it without triggering a full-screen Space switch (macOS) or losing focus.
+
 ## Notes
 
 - All data — captured lines and your preferences — is stored in your browser's `localStorage`, scoped to wherever you opened the file from. Nothing is sent anywhere.

@@ -7,6 +7,8 @@ A minimal, single-file texthooker for reading Japanese text (manga, VNs, games) 
 1. Download `texthooker.html` (or clone this repo).
 2. Open it in a Chromium-based browser (Chrome or Edge) — double-click the file, or drag it into a tab.
 3. Install a clipboard-watching extension, e.g. **Clipboard Inserter Redux**, and enable it for this page. It should append clipboard text as a bare `<p>` tag to the page — that's what this page watches for.
+   - If you're opening `texthooker.html` directly from disk (`file://...`), Chrome extensions can't inject into local files by default. Go to `chrome://extensions`, open the extension's details, and turn on **"Allow access to file URLs"** — then reload the tab.
+   - Alternatively, skip the file:// permission entirely by serving the folder locally (e.g. `python3 -m http.server` from the folder, then open `http://localhost:8000/texthooker.html`) and enabling the extension there instead.
 4. Point your text-hook / OCR tool (Textractor, manga-ocr, etc.) so its output goes to your OS clipboard.
 5. Read — every new clipboard entry appears as a new line automatically.
 
@@ -26,3 +28,4 @@ A minimal, single-file texthooker for reading Japanese text (manga, VNs, games) 
 
 - All data — captured lines and your preferences — is stored in your browser's `localStorage`, scoped to wherever you opened the file from. Nothing is sent anywhere.
 - Floating window mode requires a Chromium-based browser that supports the Document Picture-in-Picture API.
+- The clipboard extension polls your system clipboard continuously while switched on for a tab — not just OCR text. If you leave it on and then copy something sensitive elsewhere, it'll get logged here too. Toggle it off when you're done reading.

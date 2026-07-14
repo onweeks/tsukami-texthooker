@@ -1,6 +1,6 @@
 # tsukami-texthooker (掴み)
 
-A minimal, single-file texthooker for reading Japanese text (manga, VNs, games) captured via a clipboard-watching OCR/hook tool. Named after 掴み (tsukami) — the Japanese term for a narrative "hook." No server, no build step, no dependencies — just open `texthooker.html` in a browser.
+A minimal, single-file texthooker for reading Japanese text (manga, VNs, games) captured via a clipboard-watching OCR/hook tool.
 
 ## Setup
 

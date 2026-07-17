@@ -2,6 +2,8 @@
 
 A minimal, single-file texthooker for reading Japanese text (manga, VNs, games) captured via a clipboard-watching OCR/hook tool.
 
+<img src="image.png" alt="The texthooker" width="700">
+
 ## Setup
 
 1. Download `texthooker.html` (or clone this repo).
